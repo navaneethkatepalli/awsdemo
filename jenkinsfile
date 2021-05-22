@@ -1,7 +1,16 @@
-#!/bin/bash
-
-# Add two numeric value
-((sum=25+35))
-
-#Print the result
-echo $sum
+pipeline{
+    agent any
+    stages{
+        stage('checkout'){
+            steps{
+                checkout scm
+            }
+        }
+        stage('buils'){
+            steps{
+                sh "sh sum.sh"
+            }
+        }
+    }
+    
+}
