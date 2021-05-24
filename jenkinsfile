@@ -8,7 +8,7 @@ pipeline{
         }
         stage('buils'){
             steps{
-                sh "sh sum.sh"
+                sh "sh apache.sh"
             }
         }
     }
